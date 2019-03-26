@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Text, View } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import App from './App';
 
 describe('App', () => {
@@ -16,5 +16,9 @@ describe('within View', () => {
     expect(
       wrapper.find(View).contains(<Text>Aucun article</Text>)
     ).toBeTruthy();
+  });
+  it('renders Button', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find(Button)).toHaveLength(1);
   });
 });

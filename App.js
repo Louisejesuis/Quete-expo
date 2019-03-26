@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
   const styles = StyleSheet.create({
@@ -10,9 +10,11 @@ export default function App() {
       justifyContent: 'center',
     },
   });
+  const onPressHandler = () => {};
   return (
     <View style={styles.container} class="test">
       <Text>Aucun article</Text>
+      <Button onPress={onPressHandler} title="Ajouter un article" />
     </View>
   );
 }
